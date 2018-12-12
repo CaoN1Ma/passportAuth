@@ -13,7 +13,7 @@ class VerificationCodesController extends Controller
 
 //        除了正式环境外，其他环境，默认不真实发送短信，短信验证码默认为1234
         if (!app()->environment('production')) {
-            $code = '1234';
+            $code = '2913';
         } else {
             // 生成4位随机数，左侧补0
             $code = str_pad(random_int(1, 9999), 4, 0, STR_PAD_LEFT);
@@ -34,9 +34,9 @@ class VerificationCodesController extends Controller
         \Cache::put($key,['phone'=>$phone, 'code'=>$code], $expiredAt);
         return $this->response->array([
             'key'=>$key,
+            'code'=>$code,
             'expired_at'=>$expiredAt->toDateTimeString(),
         ])->setStatusCode(201);
-
 
     }
 }
