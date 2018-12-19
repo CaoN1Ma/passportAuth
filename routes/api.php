@@ -56,6 +56,9 @@ use App\Http\Controllers\Api\TopicsController;
                 ->name('api.topics.update');
             $api->delete('topics/{topic}', 'TopicsController@destroy')
                 ->name('api.topics.destroy');
+            // 发布回复
+            $api->post('topics/{topic}/replies', 'RepliesController@store')
+                ->name('api.topics.replies.store');
         });
         // 短信验证码
         $api->post('verificationCodes', 'VerificationCodesController@store')
