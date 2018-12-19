@@ -48,6 +48,8 @@ use App\Http\Controllers\Api\TopicsController;
                 ->name('api.topics.store');
             $api->patch('topics/{topic}','TopicsController@update')
                 ->name('api.topics.update');
+            $api->delete('topics/{topic}', 'TopicsController@destroy')
+                ->name('api.topics.destroy');
         });
         // 短信验证码
         $api->post('verificationCodes', 'VerificationCodesController@store')
