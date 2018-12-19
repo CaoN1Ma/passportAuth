@@ -34,6 +34,8 @@ use App\Http\Controllers\Api\TopicsController;
             ->name('api.categories.index');
         $api->get('topics', 'TopicsController@index')
             ->name('api.topics.index');
+        $api->get('topics/{topic}', 'TopicsController@index')
+            ->name('api.topics.show');
         $api->get('users/{user}/topics', 'TopicsController@index')
             ->name('api.users.topics.index');
         // 需要 token 验证的接口

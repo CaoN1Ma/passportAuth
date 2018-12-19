@@ -62,4 +62,9 @@ class TopicsController extends Controller
         $topic=$user->topics()->recent()->paginate(20);
         return $this->response->paginate($topic, new TopicTransformer());
     }
+
+    public function show(Topic $topic)
+    {
+        return $this->response->item($topic, new TopicTransformer());
+    }
 }
