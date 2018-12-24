@@ -3391,21 +3391,21 @@
         },
         {
             "name": "summerblue/administrator",
-            "version": "v1.1.4",
+            "version": "v1.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/summerblue/administrator.git",
-                "reference": "a13939304c1dbba15ab56947f3ef9937657f586c"
+                "reference": "37c27b82cc9f09fdd1709d4e2335a936738a3ef8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/summerblue/administrator/zipball/a13939304c1dbba15ab56947f3ef9937657f586c",
-                "reference": "a13939304c1dbba15ab56947f3ef9937657f586c",
+                "url": "https://api.github.com/repos/summerblue/administrator/zipball/37c27b82cc9f09fdd1709d4e2335a936738a3ef8",
+                "reference": "37c27b82cc9f09fdd1709d4e2335a936738a3ef8",
                 "shasum": ""
             },
             "require": {
                 "ckeditor/ckeditor": "4.*",
-                "laravel/framework": "5.5.*",
+                "laravel/framework": "5.5.* || 5.6.* || 5.7.*",
                 "php": ">=7.0.0"
             },
             "require-dev": {
@@ -3448,7 +3448,7 @@
                 "laravel",
                 "laravel-administrator"
             ],
-            "time": "2017-10-27T11:08:56+00:00"
+            "time": "2018-12-13T05:19:28+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
